@@ -32,15 +32,20 @@ const SingleWalk = () => {
     loadCards();
   }, []);
 
-  if(isLoading) {
+  if (isLoading) {
     return <div>loading..</div>
   }
 
   return <div>
     <div>Single walk, id: {id}</div>
-    <div className={styles.contentContainer}>      
-      {/* No uniq value for card to use as key, title look uniq (guess?) */}
-      {cards.map(({ title, rainbow, description }) => <Card key={title} title={title} description={description} rainbow={rainbow} />)}
+    <div className={styles.contentContainer}>
+      <div className={styles.cardsContainer}>
+        {/* No uniq value for card to use as key, title look uniq (guess?) */}
+        {cards.map(({ title, rainbow, description }) => <Card key={title} title={title} description={description} rainbow={rainbow} />)}
+      </div>
+      <div className={styles.insightsContainer}>
+        test
+      </div>
     </div>
   </div>
 };

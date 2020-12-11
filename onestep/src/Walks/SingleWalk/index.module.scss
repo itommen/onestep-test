@@ -1,3 +1,16 @@
 .contentContainer {
   display: flex;
+  justify-content: space-around;
+
+  .cardsContainer {
+    display: flex;
+    flex: 2;
+    flex-direction: row; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .insightsContainer {
+    flex: 1;
+  }
 }

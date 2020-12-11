@@ -1,12 +1,20 @@
 import React from 'react';
 
-const SingleWalkParamter = ({title, rainbow, description}) => {
-  return <div>
-    <span>{title}</span>
-    <span>{JSON.stringify(rainbow)}</span> {/* TODO: Widget */}
-    <span>{description}</span>
+import Card from '@material-ui/core/Card';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
-  </div>
-} ;
+import RainbowWidget from './RainbowWidget';
 
-export default SingleWalkParamter;
+import styles from './index.module.scss';
+
+const WalkCard = ({ title, rainbow, description }) => {
+  return <Card className={styles.cardContainer}>
+    <Typography align={'center'}>{title}</Typography>
+    <Typography align={'center'}>{description}</Typography>
+    <Divider />
+    <RainbowWidget {...rainbow} />
+  </Card>
+};
+
+export default WalkCard;
