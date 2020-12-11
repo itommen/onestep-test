@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 
 import Card from './Card';
 
+import styles from './index.module.scss';
+
 const SingleWalk = () => {
   const { id } = useParams();
 
@@ -30,11 +32,15 @@ const SingleWalk = () => {
     loadCards();
   }, []);
 
+  if(isLoading) {
+    return <div>loading..</div>
+  }
+
   return <div>
     <div>Single walk, id: {id}</div>
-    <div>
-      {/* TODO: Key temp */}
-      {cards.map((x,index) => <Card key={index} {...x } />)}
+    <div className={styles.contentContainer}>      
+      {/* No uniq value for card to use as key, title look uniq (guess?) */}
+      {cards.map(({ title, rainbow, description }) => <Card key={title} title={title} description={description} rainbow={rainbow} />)}
     </div>
   </div>
 };

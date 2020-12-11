@@ -1,9 +1,12 @@
 import React from 'react';
 
-const SingleWalkParamter = (props) => {
-  console.log(props);
+const SingleWalkParamter = ({title, rainbow, description}) => {
+  return <div>
+    <span>{title}</span>
+    <span>{JSON.stringify(rainbow)}</span> {/* TODO: Widget */}
+    <span>{description}</span>
 
-  return <div>Paramter</div>
+  </div>
 } ;
 
 export default SingleWalkParamter;
