@@ -2,13 +2,13 @@
   display: flex;
 
   .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex: 2;
-    flex-direction: column;
-    background-color: green;
   }
   
   .padding {
     flex: 1;
-    background-color: red;
   }
 }

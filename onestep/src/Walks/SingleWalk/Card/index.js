@@ -12,7 +12,7 @@ const WalkCard = ({ title, rainbow, description }) => {
   return <Card className={styles.cardContainer}>
     <Typography align={'center'}>{title}</Typography>
     <Typography align={'center'}>{description}</Typography>
-    <Divider />
+    <Divider style={{ margin: '20px 0' }} />
     <RainbowWidget {...rainbow} />
   </Card>
 };

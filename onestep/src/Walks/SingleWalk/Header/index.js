@@ -1,25 +1,27 @@
 import React from 'react';
 
 import moment from 'moment';
+import Typography from '@material-ui/core/Typography';
 
 import styles from './index.module.scss';
 
 const minutes = 0;
 
-const Header = ({ steps, timestamp, seconds }) => {
+const Header = ({ steps, timestamp, seconds, ...props }) => {
+  console.log(props);
   return <div className={styles.header}>
     <div className={styles.content}>
       <div>
-        <div>Walk Summary</div>
-        <div>{moment(timestamp).format('dddd, MMMM DD, YYYY hh:mm')}</div>
+        <Typography variant={'h4'}>Walk Summary</Typography>
+        <Typography>{moment(timestamp).format('dddd, MMMM DD, YYYY hh:mm')}</Typography>
       </div>
-      <div>
+      <Typography variant={'h5'}>
         {/* TODO: check for minuts */}
-        {minutes} : {seconds} sec
-      </div>
-      <div>
+        {minutes} : {seconds}sec
+      </Typography>
+      <Typography variant={'h5'}>
         {steps} Steps
-      </div>
+      </Typography>
     </div>
     <div className={styles.padding}>
     </div>

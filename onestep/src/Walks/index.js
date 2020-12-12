@@ -37,6 +37,7 @@ const Walks = () => {
   return <div className={styles.walksContainer}>
     <List component="nav" >
       {walks.map(({ title, uuid, extraction_level }) => <WalkPreview key={uuid} title={title} extraction_level={extraction_level} id={uuid} />)}
+      {!walks?.length && 'No walks found'}
     </List>
   </div>;
 };
