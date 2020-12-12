@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
+import List from '@material-ui/core/List';
 
 import WalkPreview from './WalkPreview';
 
@@ -15,14 +16,13 @@ const Walks = () => {
     const loadWalks = async () => {
       setIsLoading(true);
       try {
-        const { data: { result } } = await axios.get('api/v3/take_home_project/my_walks');
+        const { data: { result } } = await axios.get('my_walks');
         setWalks(result);
         setIsLoading(false);
       }
       catch (ex) {
         console.log(ex);
         setIsLoading(false);
-        debugger;
       }
     };
 
@@ -35,7 +35,9 @@ const Walks = () => {
   }
 
   return <div className={styles.walksContainer}>
-    {walks.map(({ title, uuid, extraction_level }) => <WalkPreview key={uuid} title={title} extraction_level={extraction_level} id={uuid} />)}
+    <List component="nav" >
+      {walks.map(({ title, uuid, extraction_level }) => <WalkPreview key={uuid} title={title} extraction_level={extraction_level} id={uuid} />)}
+    </List>
   </div>;
 };
 

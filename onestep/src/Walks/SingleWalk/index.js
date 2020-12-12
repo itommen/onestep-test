@@ -17,15 +17,13 @@ const SingleWalk = () => {
     const loadCards = async () => {
       setIsLoading(true);
       try {
-        const { data: { cards } } = await axios.get(`api/v3/take_home_project/my_walks/${id}`);
+        const { data: { cards } } = await axios.get(`my_walks/${id}`);
         setCards(cards);
         setIsLoading(false);
-        debugger
       }
       catch (ex) {
         console.log(ex);
         setIsLoading(false);
-        debugger;
       }
     };
 

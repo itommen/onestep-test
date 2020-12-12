@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://dev.takeonestep.com/",
+  "proxy": "https://dev.takeonestep.com/api/v3/take_home_project/",
   "eslintConfig": {
     "extends": [
       "react-app",
