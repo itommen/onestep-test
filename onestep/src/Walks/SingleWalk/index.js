@@ -23,7 +23,8 @@ const SingleWalk = () => {
         console.log(result);
 
         const { data: { cards, metadata } } = result;
-        setCards(cards);
+        // TODO: only way i saw to identify missing values
+        setCards(cards.filter(({ description }) => description));
         setMetadata(metadata);
         setIsLoading(false);
       }

@@ -1,9 +1,32 @@
-.rainbowContainer {
+.rainbowOuterContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
 
-  .unitsBar {
+  .rainbowContainer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 250px;
+
+    .bubbleContainer {
+      position: relative;
+
+      .bubbleValue {
+        width: 65px;
+        position: absolute;
+        top: 5px;
+        text-align: center;
+        color: white;
+
+        .bubbleUnits {
+          font-size: 10px;
+        }
+      }
+    }
+  
+    .unitsBar {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
