@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+
+  .content {
+    flex: 2;
+    flex-direction: column;
+    background-color: green;
+  }
+  
+  .padding {
+    flex: 1;
+    background-color: red;
+  }
+}
