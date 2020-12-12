@@ -1,4 +1,16 @@
 .walksContainer {
   display: flex;
   flex-direction: column;
+
+  animation: fadeIn 1s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    
+    to {
+      opacity: 1;
+    }
+  }
 }

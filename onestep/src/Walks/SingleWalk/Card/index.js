@@ -10,8 +10,8 @@ import styles from './index.module.scss';
 
 const WalkCard = ({ title, rainbow, description }) => {
   return <Card className={styles.cardContainer}>
-    <Typography align={'center'}>{title}</Typography>
-    <Typography align={'center'}>{description}</Typography>
+    <Typography variant={'h5'} align={'center'}>{title}</Typography>
+    <Typography variant={'body1'} align={'center'}>{description}</Typography>
     <Divider style={{ margin: '20px 0' }} />
     <RainbowWidget {...rainbow} />
   </Card>

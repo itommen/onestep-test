@@ -7,8 +7,10 @@ import WalkPreview from './WalkPreview';
 
 import styles from './index.module.scss';
 
+// Notes: 
+// 1. In order to add filters, create another array (filteredData) & filters array & by any filter change filter the original array into the filtered data
+// 2. Loads should be inside stores (mobx / redux), for 2 pages used hooks
 const Walks = () => {
-  // TODO: Move all to store
   const [walks, setWalks] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,6 +25,7 @@ const Walks = () => {
       catch (ex) {
         console.log(ex);
         setIsLoading(false);
+        // Notify user about failed request, maybe resend request after x time
       }
     };
 

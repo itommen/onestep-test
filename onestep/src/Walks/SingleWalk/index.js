@@ -41,7 +41,7 @@ const SingleWalk = () => {
     return <div>loading..</div>
   }
 
-  return <div>
+  return <div className={styles.cardContainer}>
     <Header steps={metadata.steps} timestamp={metadata.timestamp} seconds={metadata.seconds} />
     <div className={styles.contentContainer}>
       <div className={styles.cardsContainer}>
@@ -49,7 +49,7 @@ const SingleWalk = () => {
         {cards.map(({ title, rainbow, description }) => <Card key={title} title={title} description={description} rainbow={rainbow} />)}
       </div>
       <div className={styles.insightsContainer}>
-        test
+        place for insights & map (sadly no time)
       </div>
     </div>
   </div>
