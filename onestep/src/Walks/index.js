@@ -35,7 +35,7 @@ const Walks = () => {
   }
 
   return <div className={styles.walksContainer}>
-    {walks.map(({ title, uuid }) => <WalkPreview key={uuid} title={title} id={uuid} />)}
+    {walks.map(({ title, uuid, extraction_level }) => <WalkPreview key={uuid} title={title} extraction_level={extraction_level} id={uuid} />)}
   </div>;
 };
 
