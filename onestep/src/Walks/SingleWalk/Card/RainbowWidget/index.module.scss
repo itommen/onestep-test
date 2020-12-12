@@ -1,0 +1,9 @@
+.rainbowContainer {
+  display: flex;
+  flex-direction: column;
+
+  .unitsBar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
